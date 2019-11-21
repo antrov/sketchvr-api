@@ -10,7 +10,7 @@ module.exports = merge(common, {
     chunkFilename: 'js/[name].chunk.js'
   },
   devServer: {
-    inline: true
+    host: '0.0.0.0'
   },
   plugins: [
     new Webpack.DefinePlugin({
@@ -19,15 +19,15 @@ module.exports = merge(common, {
   ],
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        include: Path.resolve(__dirname, '../src'),
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options: {
-          emitWarning: true,
-        }
-      },
+      // {
+      //   test: /\.js$/,
+      //   include: Path.resolve(__dirname, '../src'),
+      //   enforce: 'pre',
+      //   loader: 'eslint-loader',
+      //   options: {
+      //     emitWarning: false,
+      //   }
+      // },
       {
         test: /\.js$/,
         include: Path.resolve(__dirname, '../src'),
