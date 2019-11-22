@@ -10,7 +10,14 @@ const actionsMap = new Map([
 
 ])
 
+function log(msg) {
+    let logDiv = document.createElement('div')
+    logDiv.innerText = msg
+    document.getElementById('console').appendChild(logDiv)
+}
+
 function execAction(actionKey, ...args) {
+    log(`execAction with key '${actionKey}' args ${args}`)
     if (!actionsMap.has(actionKey)) { return }
     actionsMap.get(actionKey)(...args)
 }
