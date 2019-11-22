@@ -9,7 +9,9 @@ module.exports = {
   },
   output: {
     path: Path.join(__dirname, '../build'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
+    libraryTarget: 'var',
+    library: 'EntryPoint'
   },
   optimization: {
     splitChunks: {

@@ -46,3 +46,5 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     document.getElementById('permstate').innerHTML = "" + await motion.permission()
 })
+
+export { execAction }
