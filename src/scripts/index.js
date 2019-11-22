@@ -3,7 +3,15 @@ import { motion } from './motion'
 import { actions } from './actions'
 
 const actionsMap = new Map([
-    ['permission', function () { motion.requestPermission().then() }],
+    ['permission', function () {
+        motion.requestPermission()
+            .then(() => {
+                motion.permission()
+            })
+            .then(permission => {
+                document.getElementById('permstate').innerHTML = "called perm - res " + permission
+            })
+    }],
     ['stepForward', function () { actions.stepForward(document.getElementById('cam').object3D) }],
     ['stepBackward', function () { actions.stepBackward(document.getElementById('cam').object3D) }],
     ['load', function (modelUri) { actions.loadModel(document.getElementById('model-container'), modelUri) }]
