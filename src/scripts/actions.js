@@ -1,7 +1,7 @@
 const actions = {
     walkHistory: [],
-    stepForward: function (camera) {
-        let cameraPositon = camera.position,
+    stepForward: function (rig, camera) {
+        let cameraPositon = rig.position,
             cameraReference = new THREE.Vector3()
 
         camera.getWorldDirection(cameraReference)
