@@ -9,7 +9,7 @@ const actionsMap = new Map([
                 motion.permission()
             })
             .then(permission => {
-                document.getElementById('permstate').innerHTML = "called perm - res " + permission
+                // document.getElementById('permstate').innerHTML = "called perm - res " + permission
             })
     }],
     ['stepForward', function () { actions.stepForward(document.getElementById('cam').object3D) }],
@@ -21,7 +21,7 @@ const actionsMap = new Map([
 function log(msg) {
     let logDiv = document.createElement('div')
     logDiv.innerText = msg
-    document.getElementById('console').appendChild(logDiv)
+    // document.getElementById('console').appendChild(logDiv)
 }
 
 function execAction(actionKey, ...args) {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         })
     })
 
-    document.getElementById('permstate').innerHTML = "" + await motion.permission()
+    // document.getElementById('permstate').innerHTML = "" + await motion.permission()
 })
 
 export { execAction }
