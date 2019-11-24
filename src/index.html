@@ -17,12 +17,12 @@
       Permission:
     </button>
 
-    <!-- <button data-action="stepForward">
+    <button data-action="stepForward">
       Step forward
     </button>
     <button data-action="stepBackward">
       Step back
-    </button> -->
+    </button>
   </div>
 
   <a-scene>
@@ -37,7 +37,10 @@
       <!-- <a-obj-model src="#obj" mtl="#mtl"></a-obj-model> -->
     </a-entity>
 
-    <a-camera id="cam" position="0 1.8 0" listener="stepFactor:0.01"></a-camera>
+    <!-- <a-camera id="cam" position="0 1.8 0" listener="stepFactor:0.01"></a-camera> -->
+    <a-entity id="rig" position="0 0 0">
+      <a-entity camera id="camera"></a-camera>
+    </a-entity>
     <a-sky color="#1EAAAA"></a-sky>
   </a-scene>
 

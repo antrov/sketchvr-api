@@ -12,7 +12,7 @@ const actionsMap = new Map([
                 // document.getElementById('permstate').innerHTML = "called perm - res " + permission
             })
     }],
-    ['stepForward', function () { actions.stepForward(document.getElementById('cam').object3D) }],
+    ['stepForward', function () { actions.stepForward(document.querySelector("#rig").object3D) }],
     ['stepBackward', function () { actions.stepBackward(document.getElementById('cam').object3D) }],
     ['load', function (modelUri) { actions.loadModel(document.getElementById('model-container'), modelUri) }]
 
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     })
 
     // document.getElementById('permstate').innerHTML = "" + await motion.permission()
+    execAction('load', '/public/sketch_test')
 })
 
 export { execAction }
