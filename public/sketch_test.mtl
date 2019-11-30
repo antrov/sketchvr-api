@@ -32,11 +32,6 @@ Ka 0.000000 0.000000 0.000000
 Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
 
-newmtl BackColor
-Ka 0.000000 0.000000 0.000000
-Kd 0.643137 0.698039 0.733333
-Ks 0.330000 0.330000 0.330000
-
 newmtl Marc_Shirt2
 Ka 0.000000 0.000000 0.000000
 Kd 0.639216 0.674510 0.827451
@@ -61,4 +56,58 @@ newmtl Marc_Wrist
 Ka 0.000000 0.000000 0.000000
 Kd 0.737255 0.309804 0.239216
 Ks 0.330000 0.330000 0.330000
+
+newmtl Aluminum
+Ka 0.000000 0.000000 0.000000
+Kd 0.701961 0.701961 0.701961
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Aluminum.jpg
+
+newmtl Carrera_Marble
+Ka 0.000000 0.000000 0.000000
+Kd 0.807843 0.807843 0.807843
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Carrera_Marble.jpg
+
+newmtl Stone_Brushed_Khaki
+Ka 0.000000 0.000000 0.000000
+Kd 0.882353 0.768627 0.517647
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Stone_Brushed_Khaki.jpg
+
+newmtl Stone_Marble
+Ka 0.000000 0.000000 0.000000
+Kd 0.556863 0.541176 0.529412
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Stone_Marble.jpg
+
+newmtl Wood_Bamboo
+Ka 0.000000 0.000000 0.000000
+Kd 0.690196 0.407843 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Wood_Bamboo.jpg
+
+newmtl Asphalt_New
+Ka 0.000000 0.000000 0.000000
+Kd 0.254902 0.239216 0.243137
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Asphalt_New.jpg
+
+newmtl Stone_Flagstone_Ashlar
+Ka 0.000000 0.000000 0.000000
+Kd 0.678431 0.454902 0.396078
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Stone_Flagstone_Ashlar.jpg
+
+newmtl Grass_Dark_Green
+Ka 0.000000 0.000000 0.000000
+Kd 0.407843 0.615686 0.211765
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Grass_Dark_Green.jpg
+
+newmtl Groundcover_River_Rock_4_inch
+Ka 0.000000 0.000000 0.000000
+Kd 0.564706 0.498039 0.423529
+Ks 0.330000 0.330000 0.330000
+map_Kd sketch_test/Groundcover_River_Rock_4_inch.jpg
 

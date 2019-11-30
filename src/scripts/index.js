@@ -40,7 +40,7 @@ window.addEventListener('keydown', function (e) {
             execAction('stepBackward')
             break
         case 'l':
-            execAction('load', '/public/sketch_test')
+            execAction('load', '/public/Zimne Wody')
             break
     }
 });

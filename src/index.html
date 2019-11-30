@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <!-- <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script> -->
 </head>
 
 <body>
@@ -25,23 +26,26 @@
     </button>
   </div>
 
-  <a-scene>
+  <a-scene shadow="type: pcfsoft">
     <a-assets>
       <!-- <a-asset-item id="mtl" src="http://localhost:8080/public/sketch_test.mtl"></a-asset-item>
       <a-asset-item id="obj" src="http://localhost:8080/public/sketch_test.obj"></a-asset-item> -->
       <!-- <a-asset-item id="mtl" src="http://127.0.0.1:8080/sketch_test.mtl"></a-asset-item>
       <a-asset-item id="obj" src="http://127.0.0.1:8080/sketch_test.obj"></a-asset-item> -->
+      <img id="sky" src="/public/sky.jpg">
     </a-assets>
 
-    <a-entity id="model-container" position="0 0 0">
+    <a-entity id="model-container" position="0 0 0" shadow="receive: true">
       <!-- <a-obj-model src="#obj" mtl="#mtl"></a-obj-model> -->
     </a-entity>
 
-    <!-- <a-camera id="cam" position="0 1.8 0" listener="stepFactor:0.01"></a-camera> -->
-    <a-entity id="rig" position="0 0 0">
+    <!-- <a-camera id="camera" position="0 1.8 0" listener="stepFactor:0.01"></a-camera> -->
+    <a-entity id="rig" position="0 0 0"> -->
       <a-entity camera id="camera"></a-camera>
     </a-entity>
-    <a-sky color="#1EAAAA"></a-sky>
+    <!-- <a-entity light="type: directional; color: #fff7ee; castShadow:true;" position="-1 1 1"></a-entity> -->
+    <!-- <a-simple-sun-sky sun-position="1 0.1 0" ></a-simple-sun-sky> -->
+    <a-sky color="#EEE"></a-sky>
   </a-scene>
 
 </body>
