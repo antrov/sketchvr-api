@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hello!</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="/scripts/index.js" type="module"></script>
+  <style type="text/css">
+    html,
+    body {
+      font-family: 'Open Sans';
+    }
+
+    img {
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero is-fullheight is-default is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+              <img src="../images/bulma.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <div style="width: 250px; height: 125px;">
+              <a-scene embedded shadow="type: pcfsoft">
+                <a-assets>
+                </a-assets>
+
+                <a-entity id="model-container" position="0 0 0" shadow="receive: true">
+                </a-entity>
+
+                <!-- <a-camera id="camera" position="0 1.8 0" listener="stepFactor:0.01"></a-camera> -->
+
+                <a-entity id="rig" position="0 1.6 0">
+                  <a-camera position="0 0 0"></a-camera>
+                </a-entity>
+
+                <a-entity light="type: directional; color: #fff7ee; castShadow:true;" position="-1 1 1"></a-entity>
+                <a-simple-sun-sky sun-position="1 0.1 0"></a-simple-sun-sky>
+                <!-- <a-sky color="#EEE"></a-sky> -->
+              </a-scene>
+            </div>
+          </div>
+          <div id="permstate"></div>
+          <button id="perm" data-action="permission">
+            Permission:
+          </button>
+
+          <button data-action="stepForward">
+            Step forward
+          </button>
+          <button data-action="stepBackward">
+            Step back
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div id="console" class="container has-text-white-bis has-background-dark is-family-monospace is-size-7"></div>
+
+    </div>
+  </section>
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-square">
+        <img src="/marshall" />
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+</body>
+
+</html>
