@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="/scripts/index.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-8">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child notification is-primary">
+                            <p class="title">Vertical...</p>
+                            <p class="subtitle">Top tile</p>
+                        </article>
+                        <article class="tile is-child notification is-warning">
+                            <a-scene embedded vr-mode-ui="enabled: false" style="height: 100%; width: 100%"
+                                screenshot="width: 3000; height: 1500;">
+<!-- position="-13 0 -13"-->
+                                <a-entity id="model-container" shadow="receive: true">
+                                </a-entity>
+
+                                <a-entity id="rig" position="0 2 0">
+                                    <a-entity rotation="0 -90 0">
+                                        <a-camera id="camera" position="0 0 0"></a-camera>
+                                    </a-entity>
+
+                                </a-entity>
+                                <a-entity id="camera-ref" position="0 2 0"></a-entity>
+                                <!-- <a-box id="camera-ref" color="tomato" depth="1" height="1" width="1" position="0 1.6 0"></a-box> -->
+
+                                <!-- <a-entity light="type: directional; color: #fff7ee; castShadow:true;" position="-1 1 1"> -->
+                                </a-entity>
+                                <a-simple-sun-sky sun-position="1 0.1 0"></a-simple-sun-sky>
+                                <!-- <a-sky color="#EEE"></a-sky> -->
+                            </a-scene>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-info">
+                            <p class="title">Middle tile</p>
+                            <p class="subtitle">With an image</p>
+                            <figure class="image is-square">
+                                <img src="/qr">
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-danger">
+                        <div id="console"
+                            class="container has-text-white-bis has-background-dark is-family-monospace is-size-7">
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-success">
+                    <div class="content">
+                        <div id="permstate"></div>
+                        <button id="perm" data-action="permission">
+                            Permission:
+                        </button>
+
+                        <button data-action="stepForward">
+                            Step forward
+                        </button>
+                        <button data-action="stepBackward">
+                            Step back
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
